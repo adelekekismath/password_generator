@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Karla:ital,wght@0,200..800;1,200..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Password generator</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Generate a</h1>
+        <h1 class="green-title">random password</h1>
+        <p class="warning-message">Never use an insecure password again.</p>
+        <div class="lenght">
+            <label for="password-lenght"> Password lenght: </label>
+            <input type="number"  name="Password" id="password-lenght">
+        </div>
+
+        <fieldset>
+            <legend>Configure password</legend>
+          
+            <div>
+              <input type="checkbox" id="symbols" name="symbols" checked />
+              <label for="symbols">Include symbol</label>
+            </div>
+          
+            <div>
+              <input type="checkbox" id="numbers" name="numbers" />
+              <label for="numbers">Include number</label>
+            </div>
+          </fieldset>
+        
+        <button onclick="generatePasswords()" class="generator-btn"> Generate passwords </button>
+
+        <div class="password-layout">
+            <div onclick="copyOnClipBoardFirstPassword()" id="password-1" class="password"></div>
+            <div onclick="copyOnClipBoardSecondPassword()" id="password-2" class="password"></div>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
