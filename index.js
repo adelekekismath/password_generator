@@ -13,17 +13,18 @@ let numbersElt = document.getElementById("numbers");
 
 function generatePasswords(){
     let lenght = parseInt(passwordLenght.value);
-    if (!lenght) {
-        lenght = 15;
-    }
+ 
+    lenght = lenght ? lenght: 15;
+    lenght = symbolsElt.value ? lenght-1 : lenght;
+    lenght = numbersElt.value ? lenght-1 : lenght;
+
+    console.log(lenght);
 
     let firstPassword = "";
     let secondPassword = "";
 
-    for(let i=0; i < lenght +1; i++ ){
+    for(let i=0; i < lenght; i++ ){
         firstPassword += characters[getRandomIndex(characters.length)];
-    }
-    for(let i=0; i < lenght +1; i++ ){
         secondPassword += characters[getRandomIndex(characters.length)];
     }
 
