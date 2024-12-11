@@ -10,7 +10,7 @@ body{
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     flex-direction: column;
 }
 
@@ -54,8 +54,21 @@ h1 {
     height: 40px;
     display: flex;
     justify-content: center;
+    gap: 10px;
     align-items: center;
     color: #10B981;
+}
+
+
+#copied{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #10B981;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
 }
 
 #password-lenght{
