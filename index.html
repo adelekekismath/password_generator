@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Karla:ital,wght@0,200..800;1,200..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css" integrity="sha512-lauN4D/0AgFUGvmMR+knQnbOADyD/XuQ8VF18I8Ll0+TLvsujshyxvU+uzogmQbSq6qJd5jnUdYtK8ShxXMlSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Password generator</title>
 </head>
 <body>
@@ -16,7 +19,7 @@
         <p class="warning-message">Never use an insecure password again.</p>
         <div class="lenght">
             <label for="password-lenght"> Password lenght: </label>
-            <input type="number" min="8"  name="Password" id="password-lenght">
+            <input  id="password-length" type="number" min="8" max="20" value="8"   name="Password" id="password-length">
         </div>
 
         <fieldset>
@@ -39,6 +42,8 @@
             <div onclick="copyOnClipBoardFirstPassword()" id="password-1" class="password"></div>
             <div onclick="copyOnClipBoardSecondPassword()" id="password-2" class="password"></div>
         </div>
+
+        <div hidden id="copied"> Copied !</div>
 
     </div>
 
