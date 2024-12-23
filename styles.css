@@ -60,6 +60,7 @@ h1 {
 }
 
 
+
 #copied{
     position: fixed;
     top: 10px;
@@ -73,9 +74,16 @@ h1 {
 
 #password-lenght{
     margin-left: 10px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 5px;
     padding: 5px;
     width: 30px;
+    font-size: 18px;
+
+}
+
+.lenght {
+    font-size: 18px;
 }
 
 fieldset{

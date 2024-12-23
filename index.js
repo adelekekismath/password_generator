@@ -8,6 +8,7 @@ const passwordLength = document.getElementById("password-length");
 const symbolsElt = document.getElementById("symbols");
 const numbersElt = document.getElementById("numbers");
 const copiedElt = document.getElementById("copied");
+const generateButton = document.getElementById("generator-btn");
 
 passwordLength.addEventListener("keydown", (event) => {
     const allowedKeys = ["Backspace", "Tab", "ArrowLeft", "ArrowRight"];
@@ -15,6 +16,9 @@ passwordLength.addEventListener("keydown", (event) => {
         event.preventDefault();
     }
 });
+
+generateButton.addEventListener("click", generatePasswords);
+
 
 function generatePasswords() {
     let length = parseInt(passwordLength.value) || 15;
