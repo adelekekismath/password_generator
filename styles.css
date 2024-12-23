@@ -72,12 +72,11 @@ h1 {
     font-size: 20px;
 }
 
-#password-lenght{
-    margin-left: 10px;
-    padding: 10px;
+#password-length{
+    margin-left: 5px;
+    padding: 5px 10px;
     border-radius: 5px;
-    padding: 5px;
-    width: 30px;
+    width: 50px;
     font-size: 18px;
 
 }
@@ -88,6 +87,7 @@ h1 {
 
 fieldset{
     margin-top: 20px;
+    font-size: 18px;
 }
 
 
