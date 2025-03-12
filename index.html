@@ -4,49 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Karla:ital,wght@0,200..800;1,200..800&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/fontawesome.min.css" integrity="sha512-lauN4D/0AgFUGvmMR+knQnbOADyD/XuQ8VF18I8Ll0+TLvsujshyxvU+uzogmQbSq6qJd5jnUdYtK8ShxXMlSg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Password generator</title>
+    <title>Password Generator</title>
 </head>
 <body>
-
     <div class="container">
-        <h1>Generate a</h1>
-        <h1 class="green-title">random password</h1>
-        <p class="warning-message">Never use an insecure password again.</p>
-        <div class="lenght">
-            <label for="password-lenght"> Password lenght: </label>
-            <input  id="password-length" type="number" min="8" max="20" value="8"   name="Password" id="password-length">
+        <h1>Password Generator</h1>
+        <div class="password-content" >
+            <div class="password-display" id="password-display"></div>
+            <button onclick="copyPassword()" id="copy-btn">COPY</button>
         </div>
-
-        <fieldset>
-            <legend>Configure password</legend>
-          
-            <div>
-              <input type="checkbox" id="symbols" name="symbols" checked />
-              <label for="symbols">Include symbol</label>
-            </div>
-          
-            <div>
-              <input type="checkbox" id="numbers" name="numbers" />
-              <label for="numbers">Include number</label>
-            </div>
-          </fieldset>
         
-        <button id="generator-btn" class="generator-btn"> Generate passwords </button>
-
-        <div class="password-layout">
-            <div onclick="copyOnClipBoardFirstPassword()" id="password-1" class="password"></div>
-            <div onclick="copyOnClipBoardSecondPassword()" id="password-2" class="password"></div>
+        <div class="settings">
+            <div class="length-setting">
+                <label for="password-length">Character Length</label>
+                <span id="length-value">13</span>
+                <input type="range" id="password-length" min="8" max="20" value="13">
+            </div>
+            <div class="checkbox-settings">
+                <label><input type="checkbox" id="uppercase" checked> Include Uppercase Letters</label>
+                <label><input type="checkbox" id="lowercase" checked> Include Lowercase Letters</label>
+                <label><input type="checkbox" id="numbers" checked> Include Numbers</label>
+                <label><input type="checkbox" id="symbols" checked> Include Symbols</label>
+            </div>
+            <div class="strength-indicator">
+                <span>STRENGTH</span>
+                <div class="strength-bar">
+                    <div class="bar" id="strength-bar"></div>
+                    <span id="strength-text"></span>
+                </div>
+            </div>
+            <button id="generate-btn">GENERATE</button>
         </div>
-
-        <div hidden id="copied"> Copied !</div>
-
+        <div class="footer">
+            Challenge by Frontend Mentor. Coded by Kismath ADELEKE
+        </div>
     </div>
-
-    <script src="./index.js" type="module"></script>
+    <script src="index.js"></script>
 </body>
 </html>

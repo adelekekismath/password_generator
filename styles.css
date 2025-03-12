@@ -1,67 +1,109 @@
-
-body{
+body {
     background-color: #1F2937;
     color: white;
     font-family: "Karla", sans-serif;
-    margin-left: 20px;
-}
-
-.container{
-    height: 100vh;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px; 
+}
+
+.container {
+    background-color: #273549;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
 }
 
 h1 {
-    margin: 0px;
-    font-size: 60px;
-    font-weight: bold;
-}
-
-.green-title {
     color: #4ADF86;
+    margin-bottom: 20px;
+    font-size: 24px; 
 }
 
-.warning-message{
-    font-size: 20px;
-}
-
-.generator-btn{
-    padding: 15px 10px;
-    color: inherit;
-    background-color: #10B981;
-    font-size: 16px;
-    margin: 50px 0;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-
-.password-layout{
-    border-top: 1px solid #273549;
-    padding-top: 30px;
+.password-content {
     display: flex;
-}
-
-.password{
-    background-color: #273549;
-    margin-right: 15px;
-    border-radius: 10px;
-    width: 210px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
     align-items: center;
-    color: #10B981;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column; 
 }
 
+#copy-btn {
+    background-color: #4ADF86;
+    color: white;
+    border: none;
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
 
+.password-display {
+    background-color: #1F2937;
+    color: #4ADF86;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px; 
+    min-height: 30px;
+    width: 100%;
+    text-align: center;
+}
 
-#copied{
+.settings {
+    text-align: left;
+}
+
+.length-setting {
+    margin-bottom: 20px;
+}
+
+.length-setting input[type="range"] {
+    width: 100%;
+}
+
+.checkbox-settings label {
+    display: block;
+    margin: 10px 0;
+}
+
+.strength-indicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.strength-bar {
+    display: flex;
+    align-items: center;
+}
+
+.bar {
+    width: 50px;
+    height: 10px;
+    background-color: #10B981;
+    margin-right: 10px;
+}
+
+#generate-btn {
+    background-color: #10B981;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#copied-message {
     position: fixed;
     top: 10px;
     right: 10px;
@@ -69,27 +111,31 @@ h1 {
     color: white;
     padding: 10px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-#password-length{
-    margin-left: 5px;
-    padding: 5px 10px;
-    border-radius: 5px;
-    width: 50px;
-    font-size: 18px;
-
-}
-
-.lenght {
-    font-size: 18px;
-}
-
-fieldset{
+.footer {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 14px;
+    color: #6B7280;
 }
 
+@media (min-width: 768px) {
+    h1 {
+        font-size: 36px; 
+    }
 
+    .password-content {
+        flex-direction: row; 
+        gap: 20px;
+    }
 
+    #copy-btn {
+        width: auto; 
+    }
 
+    .password-display {
+        font-size: 24px; 
+        min-width: 280px; 
+    }
+}
