@@ -8,6 +8,7 @@ const symbolsCheckbox = document.getElementById("symbols");
 const generateBtn = document.getElementById("generate-btn");
 const strengthBar = document.getElementById("strength-bar");
 const strengthText = document.getElementById("strength-text");
+const copyBtn = document.getElementById("copy-btn");
 
 const uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
@@ -39,6 +40,8 @@ generateBtn.addEventListener("click", () => {
     passwordDisplay.textContent = password;
     updateStrengthIndicator(password);
 });
+
+copyBtn.addEventListener("click", copyPassword);
 
 function updateStrengthIndicator(password) {
     const strength = calculatePasswordStrength(password);
